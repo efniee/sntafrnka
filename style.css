@@ -1,0 +1,20 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-color: rgba(128, 128, 0, 0.425);
+}
+
+#about {
+  background-color: azure;
+}
+
+#projects {
+  background-color: rgba(183, 143, 40, 0.459);
+}
+
+#contact {
+  background-color: rgba(188, 143, 143, 0.486);
+}
+
+section {
+  padding-top: 6rem;
+}
