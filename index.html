@@ -171,6 +171,7 @@
                 <textarea class="form-control" id="Pesan" rows="3" name="pesan"></textarea>
               </div>
               <button type="submit" class="btn btn-outline-danger btn-submit">Submit</button>
+
               <button class="btn btn-danger btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
@@ -200,7 +201,7 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx8loUW4B3-hmbs6oogfVOU8sWOPmaDFZNYKYsy7EV3bw7gW61C9KRu_QXo0_EIrewb/exec';
       const form = document.forms['contact-form'];
-      const btnKirim = document.querySelector('.btn-kirim');
+      const btnSubmit = document.querySelector('.btn-submit');
       const btnLoading = document.querySelector('.btn-loading');
       const myAlert = document.querySelector('.my-alert');
 
@@ -209,12 +210,12 @@
         //ketika tombol submit di klik
         //tampilkan tombol loading, hilangkan tombol kirim
         btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
+        btnSubmit.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then((response) => {
             //tampilkan tombol kirim, hilangkan tombol loading
             btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
+            btnSubmit.classList.toggle('d-none');
             //tampilkan alert
             myAlert.classList.toggle('d-none');
             //reset form-nya
