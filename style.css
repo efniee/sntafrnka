@@ -11,10 +11,22 @@
   background-color: rgba(183, 143, 40, 0.459);
 }
 
+#gallery {
+  background-color: rgba(0, 206, 209, 0.263);
+}
+
 #contact {
   background-color: rgba(188, 143, 143, 0.486);
 }
 
 section {
   padding-top: 6rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
 }
