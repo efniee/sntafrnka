@@ -19,6 +19,10 @@
   background-color: rgba(188, 143, 143, 0.486);
 }
 
+#my-fauna {
+  background-color: rgba(34, 139, 34, 0.183);
+}
+
 section {
   padding-top: 6rem;
 }
@@ -29,4 +33,79 @@ section {
 
 #gallery .row > * {
   padding: 0;
+}
+
+/* My Fauna Section */
+.fauna-box {
+  position: relative;
+  background-color: rgba(106, 142, 35, 0.644);
+  border-radius: 20px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.fauna-box::before {
+  content: 'MY';
+  position: absolute;
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 1s;
+}
+
+.fauna-box:hover::before {
+  opacity: 0.2;
+}
+
+.fauna-box::after {
+  content: 'FAUNA';
+  position: absolute;
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 1s;
+}
+
+.fauna-box:hover::after {
+  opacity: 0.2;
+}
+
+.fauna-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-style: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 1s;
+}
+
+.fauna-box:hover .fauna-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.fauna-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 100px);
+  max-width: 200px;
+  transition: 1s;
+}
+
+.fauna-box:hover .fauna-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
 }
